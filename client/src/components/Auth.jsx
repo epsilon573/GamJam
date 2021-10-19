@@ -1,6 +1,7 @@
 import React,{useState} from'react';
 import Cookies from 'universal-cookie'
 import axios from 'axios';
+import TextField from '@mui/material/TextField';
 
 import signinImage from '../assets/signup.jpg';
 
@@ -41,76 +42,97 @@ const Auth=()=>
                 <p>{isSignup?"Sign Up":"Sign In"}</p>
                 <form onSubmit={handleSubmit} >
                     {isSignup &&(
-                        <div className="auth__form-container_fields-content_input">
-                            <label htmlFor="fullName">FullName</label>
-                            <input 
-                                name="fullName"
-                                type="text"
-                                placeholder="Full Name"
-                                onChange={handleChange}
-                                required>
-                            </input>
-                        </div>
+                        // <div className="auth__form-container_fields-content_input">
+                        <div>
+                            
+                            <TextField id="outlined-basic" 
+                            className="auth__form-container_fields-content_input"
+                            fullWidth
+                            // size="small"
+                            label="Full Name" 
+                            variant="outlined" 
+                            name="fullName"
+                            onChange={handleChange}
+                            required
+                            />
+                         </div>
                     )}
                     
-                    <div className="auth__form-container_fields-content_input">
-                            <label htmlFor="userName">User Name</label>
-                            <input 
-                                name="userName"
-                                type="text"
-                                placeholder="User Name"
-                                onChange={handleChange}
-                                required>
-                            </input>
-                    </div>
-
-                    {isSignup &&(
-                        <div className="auth__form-container_fields-content_input">
-                            <label htmlFor="phoneNumber">Phone Number</label>
-                            <input 
-                                name="phoneNumber"
-                                type="text"
-                                placeholder="Phone Number"
-                                onChange={handleChange}
-                                required>
-                            </input>
-                        </div>
-                    )}
-
-                    {isSignup &&(
-                        <div className="auth__form-container_fields-content_input">
-                            <label htmlFor="avatarURL">Avatar URL</label>
-                            <input 
-                                name="avatarURL"
-                                type="text"
-                                placeholder="Avatar URL"
-                                onChange={handleChange}
-                                required>
-                            </input>
-                        </div>
-                    )}
-
-                    <div className="auth__form-container_fields-content_input">
-                            <label htmlFor="password">Password</label>
-                            <input 
-                                name="password"
-                                type="password"
-                                placeholder="Password"
-                                onChange={handleChange}
-                                required>
-                            </input>
-                        </div>
-                    {isSignup &&(
-                        <div className="auth__form-container_fields-content_input">
-                        <label htmlFor="confirmPassword">Confirm Password</label>
-                        <input 
-                            name="confirmPassword"
-                            type="password"
-                            placeholder="Confirm Password"
+                    <div>
+                            <TextField id="outlined-basic" 
+                            fullWidth
+                            // size="small"
+                            className="auth__form-container_fields-content_input"
+                            label="User Name" 
+                            variant="outlined" 
+                            name="userName"
                             onChange={handleChange}
-                            required>
-                        </input>
+                            required
+                            />
                     </div>
+
+                    {isSignup &&(
+                        <div>
+                        
+                        <TextField id="outlined-basic" 
+                        fullWidth
+                        // size="small"
+                        className="auth__form-container_fields-content_input"
+                        label="Phone Number" 
+                        variant="outlined" 
+                        name="phoneNumber"
+                        onChange={handleChange}
+                        required
+                        />
+                        </div>
+                    )}
+
+                    {isSignup &&(
+                        <div>
+                        <TextField id="outlined-basic" 
+
+                        fullWidth
+                        // size="small"
+                        className="auth__form-container_fields-content_input"
+                        label="Avatar URL" 
+                        variant="outlined" 
+                        name="avatarUrl"
+                        onChange={handleChange}
+                        required
+                        />
+                    </div>
+                    )}
+
+                    <div>
+                        <TextField
+                            className="auth__form-container_fields-content_input"
+                            id="outlined-password-input"
+                            fullWidth
+                            // size="small"
+                            label="Password"
+                            type="password"
+                            
+                            name="password"
+                            onChange={handleChange}
+                            required
+                            />
+                    </div>
+
+                    {isSignup &&(
+                        <div>
+                        <TextField
+                            className="auth__form-container_fields-content_input"
+                            id="outlined-password-input"
+                            fullWidth
+                            // size="small"
+                            label="Confirm Password"
+                            type="password"
+                            
+                            name="confirmPassword"
+                            onChange={handleChange}
+                            required
+                            />
+                        </div>
                     )}
 
                 <div className="auth__form-container_fields-content_button">
