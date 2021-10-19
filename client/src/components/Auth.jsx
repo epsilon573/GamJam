@@ -2,6 +2,7 @@ import React,{useState} from'react';
 import Cookies from 'universal-cookie'
 import axios from 'axios';
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 import signinImage from '../assets/signup.jpg';
 
@@ -136,7 +137,8 @@ const Auth=()=>
                     )}
 
                 <div className="auth__form-container_fields-content_button">
-                        <button> {isSignup?"Sign Up":"Sign In"}</button>
+                        
+                        <Button variant="contained" color="success" size="large">{isSignup?"Sign Up":"Sign In"}</Button>
                 </div>    
 
                 </form>
