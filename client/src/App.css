@@ -132,7 +132,7 @@
   
     .auth__form-container_fields {
       justify-content: flex-start;
-
+      align-items:center;
       
     }
   
