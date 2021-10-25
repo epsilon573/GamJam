@@ -4,7 +4,7 @@ import axios from 'axios';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-import signinImage from '../assets/signup.jpg';
+import signinImage from '../assets/Mysign.jpg';
 
 
 const Auth=()=>
@@ -159,7 +159,8 @@ const Auth=()=>
         </div>
         
         <div className="auth__form-container_image">
-            <img src={signinImage} alt="sign in"/>
+            <div id="sign_img"><img src={signinImage} alt="sign in"/></div>
+            
         </div>
 
     </div>
